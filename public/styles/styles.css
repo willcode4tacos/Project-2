@@ -1,0 +1,15 @@
+.list-group-item {
+  line-height: 2.5;
+}
+
+body {
+  background-image: url("/images/store.jpg");
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.jumbotron {
+  background-color: #cab59d;
+  background: none;
+  margin-bottom: 0px
+}

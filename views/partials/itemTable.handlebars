@@ -1,0 +1,30 @@
+
+<script type="text/javascript" src="/js/utilities/htmlFactory.js"></script>
+<script type="text/javascript" src="/js/utilities/baseAPI.js"></script>
+<script type="text/javascript" src="/js/tableController/tableFunctions.js"></script>
+<script type="text/javascript" src="/js/tableController/events.js"></script>
+
+<section class="card">
+    <h3 class="card-header"><i class="fa fa-list-alt"></i>Items Inventory</h3>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="bg-secondary">
+                    <tr class="col-sm-12">
+                        {{#if allItems}}
+                        {{> tablePartials/allItems}}
+                        {{/if}}
+                        {{#if expiredItems}}
+                        {{> tablePartials/expiredItems}}
+                        {{/if}}
+                        {{#if lowItems}}
+                        {{> tablePartials/lowItems}}
+                        {{/if}}
+                    </tr>
+                </thead>
+                <tbody id="results">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

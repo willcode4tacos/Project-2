@@ -1,0 +1,63 @@
+<section class="card">
+    <h3 class="card-header"><i class="fa fa-list-alt"></i>Add Inventory Item</h3>
+    <div class="card-body">
+        <div id="uuid" value={{dbItem.uuid}}></div>
+        <div class="form-group">
+            <label for="itemName">Item Name:</label>
+            <input type="text" class="form-control" id="itemName" value="{{dbItem.name}}" placeholder="Item Name">
+        </div>
+        <div class="form-group">
+            <label for="sku">Sku:</label>
+            <input type="text" class="form-control" id="sku" value="{{dbItem.sku}}" placeholder="A123">
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" class="form-control" id="price" value="{{dbItem.price}}" placeholder="$">
+        </div>
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <input type="text" class="form-control militaryTime" id="category" value="{{dbItem.category}}" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" id="description" value="{{dbItem.description}}" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="text" class="form-control" id="quantity" value={{dbItem.quantity}} placeholder="0">
+        </div>
+        <div class="form-group">
+            <label for="expectedQuantity">Expected Quantity:</label>
+            <input type="text" class="form-control" id="expectedQuantity" value="{{dbItem.expectedQuantity}}" placeholder="0">
+        </div>
+        <div class="form-group">
+            <label for="alertOnQuantity">Alert On Quantity:</label>
+            <input type="text" class="form-control" id="alertOnQuantity" value="{{dbItem.alertOnQuantity}}" placeholder="0">
+        </div>
+        <div class="form-group">
+            <label for="waiteTimeOnOrderHours">Wait Time On Order Hours:</label>
+            <input type="text" class="form-control" id="waiteTimeOnOrderHours" value="{{dbItem.waiteTimeOnOrderHours}}"
+                placeholder="0">
+        </div>
+        <div class="form-group">
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="text" class="form-control" id="expirationDate" value="{{dbItem.expirationDate}}" placeholder="mm/dd/yyyy">
+        </div>
+
+        {{#if addItems}}
+        <button type="submit" id="submitBtn" class="btn btn-outline-dark"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+            Submit &raquo;</button>
+        {{/if}}
+        {{#if updateItems}}
+        <button type="submit" id="updateBtn" class="btn btn-outline-dark"><i class="fa fa-edit" aria-hidden="true"></i>
+            Update &raquo;</button>
+        {{/if}}
+        <h5 id="finishedAddUpdate"></h5>
+    </div>
+
+</section>
+
+<script type="text/javascript" src="/js/utilities/cleave.min.js"></script>
+<script type="text/javascript" src="/js/formatting/itemInputForm.js"></script>
+<script type="text/javascript" src="/js/addItemForm/itemForm.js"></script>
+<script type="text/javascript" src="/js/addItemForm/events.js"></script>
